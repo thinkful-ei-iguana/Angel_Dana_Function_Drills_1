@@ -1,7 +1,7 @@
 // eslint-disable-next-line strict
-function createGreeting (){
-  return 'Hi, my name is Dana and I am 31 years old.';
+function createGreeting (name, age){
+  return `Hi, my name is ${name} and I am ${age} years old.`;
 }
 
-const greeting1 = createGreeting();
+const greeting1 = createGreeting('Dana', '31');
 console.log(greeting1);
