@@ -10,6 +10,9 @@ function createGreeting (name, age){
   if(name === undefined || age === undefined){
     throw new Error ('Invalid Arguement');
   }
+  else if(typeof name !== 'string' || typeof age !=='number'){
+    throw new TypeError();
+  }
   else{
     const yearOfBirth = getYearOfBirth(age);
     return `Hi, my name is ${name} and I am ${age} years old. I was born in ${yearOfBirth}.`;
@@ -17,7 +20,7 @@ function createGreeting (name, age){
 }
 
 try{
-  const greeting1 = createGreeting('Angel');
+  const greeting1 = createGreeting(5,'Angel');
   console.log(greeting1);
 } 
 catch(e){
